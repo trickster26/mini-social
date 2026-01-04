@@ -6,9 +6,9 @@ const postsRoutes = require('./routes/posts');
 
 const app = express();
 
-// CORS configuration
+// CORS configuration - allow all origins for deployment
 app.use(cors({
-    origin: [config.frontendUrl, 'http://localhost:5173', 'http://localhost:3000'],
+    origin: true, // Allow all origins
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
