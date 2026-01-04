@@ -1,0 +1,236 @@
+.create-post-trigger {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.create-trigger-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.create-trigger-input {
+    flex: 1;
+    background: var(--bg-elevated);
+    border: none;
+    border-radius: var(--radius-full);
+    padding: 0.625rem 1rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+}
+
+.create-trigger-input:hover {
+    background: var(--bg-hover);
+}
+
+/* Modal Overlay */
+.create-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    animation: fadeIn 0.2s ease;
+}
+
+.create-modal {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow: hidden;
+    animation: scaleIn 0.2s ease;
+}
+
+.create-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.create-modal-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+}
+
+.modal-close-btn {
+    background: transparent;
+    padding: 0.25rem;
+    color: var(--text-primary);
+    display: flex;
+}
+
+.modal-close-btn:hover {
+    opacity: 0.7;
+}
+
+.modal-share-btn {
+    background: transparent;
+    color: var(--instagram-blue);
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+}
+
+.modal-share-btn:hover:not(:disabled) {
+    color: white;
+}
+
+.modal-share-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* Upload Area */
+.upload-area {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    position: relative;
+}
+
+.upload-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.upload-icon {
+    color: var(--text-primary);
+}
+
+.upload-text {
+    font-size: 20px;
+    color: var(--text-primary);
+}
+
+.upload-hint {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.upload-btn {
+    background: var(--instagram-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Image Preview */
+.image-preview-area {
+    position: relative;
+}
+
+.preview-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.remove-preview-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-preview-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Caption Area */
+.caption-area {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.caption-input-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.caption-input-row textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    resize: none;
+    min-height: 80px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.caption-input-row textarea:focus {
+    outline: none;
+}
+
+.char-count {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+/* Error */
+.create-error {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(237, 73, 86, 0.1);
+    color: var(--error);
+    font-size: 14px;
+    border-top: 1px solid rgba(237, 73, 86, 0.2);
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .create-modal {
+        max-width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+}

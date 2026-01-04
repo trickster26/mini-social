@@ -1,0 +1,148 @@
+.post-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.post-username {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.post-location {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.post-more-btn {
+    background: transparent;
+    color: var(--text-primary);
+    padding: 0.25rem;
+    display: flex;
+}
+
+.post-more-btn:hover {
+    opacity: 0.7;
+}
+
+/* Post Image */
+.post-image-wrapper {
+    position: relative;
+    width: 100%;
+    background: var(--bg-secondary);
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.post-actions-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.action-btn {
+    background: transparent;
+    color: var(--text-primary);
+    padding: 0.5rem;
+    margin: -0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    opacity: 0.7;
+}
+
+.action-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.action-btn.liked svg {
+    color: var(--heart);
+    fill: var(--heart);
+    animation: heartPop 0.3s ease;
+}
+
+/* Post Content */
+.post-content {
+    padding: 0 1rem;
+}
+
+.post-likes {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.post-caption-row {
+    margin-bottom: 0.5rem;
+}
+
+.post-caption-username {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.post-caption-text {
+    color: var(--text-primary);
+}
+
+.post-time {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1rem 1rem;
+}
+
+/* View Comments Button */
+.view-comments-btn {
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.view-comments-btn:hover {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 470px) {
+    .post-card {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}

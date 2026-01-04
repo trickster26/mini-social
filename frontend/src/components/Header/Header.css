@@ -1,0 +1,75 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo svg {
+    color: var(--text-primary);
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-style: italic;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-icon-btn {
+    background: transparent;
+    padding: 0.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+}
+
+.header-icon-btn:hover {
+    opacity: 0.7;
+}
+
+.header-icon-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 640px) {
+    .header-content {
+        padding: 0.5rem 1rem;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+}

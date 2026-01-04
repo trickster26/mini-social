@@ -1,0 +1,125 @@
+.comments-section {
+    padding: 0 1rem 0.5rem;
+}
+
+/* Comment List */
+.comments-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 0.75rem;
+}
+
+.comment-item {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    animation: fadeIn 0.2s ease;
+}
+
+.comment-item .avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+}
+
+.comment-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.comment-username {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.comment-text {
+    color: var(--text-primary);
+    word-wrap: break-word;
+}
+
+.comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.reply-btn {
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0;
+}
+
+.reply-btn:hover {
+    color: var(--text-secondary);
+}
+
+/* Add Comment Form */
+.add-comment-form {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.add-comment-form .avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+}
+
+.comment-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.comment-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 14px;
+    padding: 0.5rem 0;
+    outline: none;
+}
+
+.comment-input::placeholder {
+    color: var(--text-muted);
+}
+
+.post-comment-btn {
+    background: transparent;
+    color: var(--instagram-blue);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0.25rem;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+}
+
+.post-comment-btn:not(:disabled) {
+    opacity: 1;
+}
+
+.post-comment-btn:disabled {
+    cursor: default;
+}
+
+.post-comment-btn:hover:not(:disabled) {
+    color: white;
+}
+
+/* No comments */
+.no-comments {
+    color: var(--text-muted);
+    font-size: 14px;
+    padding: 0.5rem 0;
+}
